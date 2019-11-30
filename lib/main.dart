@@ -31,6 +31,38 @@ class dragonCard extends StatelessWidget {
                   letterSpacing: 2.0,
                   fontSize: 28,
                   fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 30),
+            Text(
+              'Current Dragon Name',
+              style: TextStyle(color: Colors.grey, letterSpacing: 2.0),
+            ),
+            SizedBox(height: 10),
+            Text(
+              '8',
+              style: TextStyle(
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2.0,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 30),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10),
+                Text(
+                  'Sco@dragon.com',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18,
+                    letterSpacing: 1.0,
+                  ),
+                )
+              ],
             )
           ],
         ),
