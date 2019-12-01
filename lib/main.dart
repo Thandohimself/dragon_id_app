@@ -19,6 +19,16 @@ class dragonCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/dragon.jpg'),
+                radius: 40.0,
+              ),
+            ),
+            Divider(
+              height: 90.0,
+              color: Colors.grey[100],
+            ),
             Text(
               'NAME',
               style: TextStyle(color: Colors.grey, letterSpacing: 2.0),
