@@ -4,7 +4,14 @@ void main() => runApp(MaterialApp(
       home: dragonCard(),
     ));
 
-class dragonCard extends StatelessWidget {
+class dragonCard extends StatefulWidget {
+  @override
+  _dragonCardState createState() => _dragonCardState();
+}
+
+class _dragonCardState extends State<dragonCard> {
+
+  int dragonLevel = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,6 +20,15 @@ class dragonCard extends StatelessWidget {
         title: Text('Dragon ID Card'),
         centerTitle: true,
         backgroundColor: Colors.teal,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            dragonLevel += 1;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[900],
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
@@ -49,7 +65,7 @@ class dragonCard extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              '8',
+              '$dragonLevel',
               style: TextStyle(
                   color: Colors.amberAccent[200],
                   letterSpacing: 2.0,
@@ -78,5 +94,17 @@ class dragonCard extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class Test extends StatefulWidget {
+  @override
+  _TestState createState() => _TestState();
+}
+
+class _TestState extends State<Test> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
